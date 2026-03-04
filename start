@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mike D — Metal Fabricator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0a;
+      --text: #f0f0f0;
+      --muted: #888;
+      --accent: #c0392b;
+      --blue: #3a7bd5;
+      --rule: #222;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      position: relative;
+    }
+
+    /* ── Banner ── */
+    .banner-placeholder {
+      width: 100%;
+      height: 280px;
+      background: #111;
+      border-bottom: 1px solid #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .banner-img[src]:not([src=""]) {
+      display: block;
+    }
+
+    .banner-img[src]:not([src=""]) + .banner-hint {
+      display: none;
+    }
+
+    .banner-hint {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #333;
+    }
+
+    /* ── Main content ── */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 3rem 2rem;
+      flex: 1;
+    }
+
+    .name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .name span { color: var(--accent); }
+
+    .cert {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 0.7rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .rule {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin: 1.2rem 0 1.8rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .description {
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #ccc;
+      max-width: 540px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 2.5rem 0;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .skills {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .skills li {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.5;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .skills li::before {
+      content: '—';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+    }
+
+    .skills strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .contact-link {
+      font-size: 1.05rem;
+      color: var(--blue);
+      text-decoration: none;
+      border-bottom: 1px solid #1e3f70;
+      padding-bottom: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-link:hover {
+      color: #6aa3f5;
+      border-color: #6aa3f5;
+    }
+
+    footer {
+      padding: 0 2rem 2rem;
+      font-size: 0.75rem;
+      color: #333;
+      letter-spacing: 0.1em;
+      max-width: 680px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BANNER IMAGE: when ready, set src to your image path, e.g. src="banner.jpg" -->
+  <div class="banner-placeholder">
+    <img src="" alt="Banner" class="banner-img" />
+    <span class="banner-hint">[ Banner image — insert path in src="" above ]</span>
+  </div>
+
+  <main>
+    <h1 class="name">Mike D<span>.</span></h1>
+    <p class="cert">AWS Certified Welding Supervisor</p>
+    <div class="rule"></div>
+    <p class="tagline">Professional Metal Fabricator for Hire</p>
+    <p class="description">
+      Small one-off jobs, small production runs, repairs, and custom work.
+      If it's metal, let's talk.
+    </p>
+    <hr class="divider" />
+    <p class="section-label">Skills &amp; Capabilities</p>
+    <ul class="skills">
+      <li>Structural steel in accordance with <strong>AWS D1.1</strong> and <strong>D1.3</strong></li>
+      <li><strong>GMAW</strong> (MIG) — carbon steel, stainless, and aluminum</li>
+      <li><strong>GTAW</strong> (TIG) — all common metals and beyond</li>
+      <li><strong>FCAW</strong> (dual/self shield) — structural and heavy duty applications</li>
+      <li><strong>SMAW</strong> (stick) — repair jobs, field work</li>
+    </ul>
+    <hr class="divider" />
+    <p class="section-label">Get in touch</p>
+    <a class="contact-link" href="mailto:fabricator@meltdown.mozmail.com">
+      fabricator@meltdown.mozmail.com
+    </a>
+  </main>
+
+  <footer>© 2026 Mike D</footer>
+
+</body>
+</html> 

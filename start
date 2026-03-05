@@ -198,10 +198,10 @@
     <h1 class="name">Mike D<span>.</span></h1>
     <p class="cert">AWS Certified Welding Supervisor</p>
     <div class="rule"></div>
-    <p class="tagline">Professional Metal Fabricator for Hire</p>
+    <p class="tagline">Professional Metal Fabricator for Hire - full time or contract</p>
     <p class="description">
-      Small one-off jobs, small production runs, repairs, and custom work.
-      If it's metal, let's talk.
+      Small one-off jobs, repairs, structural steel, hobby help & more!
+      Steel or aluminum - if it's metal, let's talk.
     </p>
     <hr class="divider" />
     <p class="section-label">Skills &amp; Capabilities</p>
@@ -213,13 +213,13 @@
       <li><strong>SMAW</strong> (stick) — repair jobs, field work</li>
     </ul>
     <hr class="divider" />
-    <p class="section-label">Get in touch</p>
+    <p class="section-label">Reach out</p>
     <a class="contact-link" href="mailto:fabricator@meltdown.mozmail.com">
       fabricator@meltdown.mozmail.com
     </a>
   </main>
 
-  <footer>© 2026 Mike D</footer>
+  <footer>© 2026 Mike D - Meltdown Fabrication</footer>
 
 </body>
 </html> 
